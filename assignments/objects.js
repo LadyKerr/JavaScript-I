@@ -1,7 +1,9 @@
 // Let's get some practice writing a few objects for a new group of interns at a small business.
 
 // ==== Challenge 1: Writing Objects ==== 
-// HR needs some information on the new interns put into a database.  Given an id, email, first name, and gender. Create an object for each person in the company list:
+// HR needs some information on the new interns put into a database.  
+// Given an id, email, first name, and gender. 
+// Create an object for each person in the company list:
 
 // 1,mmelloy0@psu.edu,Mitzi,F
 // 2,kdiben1@tinypic.com,Kennan,M
@@ -18,27 +20,72 @@ const example = {
 }
 
 // Write your intern objects here:
+  const internOne = {
+    id: 1,
+    email: "mmelloy0@psu.edu",
+    "first name": "Mitzi",
+    gender: "F",
+  };
 
+  const internTwo = {
+    id: 2,
+    email: "kdiben1@tinypic.com",
+    "first name": "Kennan",
+    gender: "M",
+    speak: function (){
+      return "Hello, my name is Kenan!"
+    },
+  };
 
+  const internThree = {
+    id: 3,
+    email: "kmummery2@wikimedia.org",
+    "first name": "Keven",
+    gender: "M",
+  };
+
+  const internFour = {
+    id: 4,
+    email: "gmartinson3@illinois.edu",
+    "first name": "Gannie",
+    gender: "M",
+  };
+  
+  const internFive = {
+    id: 5,
+    email: "adaine5@samsung.com",
+    "first name": "Antonietta",
+    gender: "F",
+    multiplyNums: function(num1, num2){
+      return num1*num2
+    },
+  };
+  
+  
 // ==== Challenge 2: Reading Object Data ==== 
 // Once your objects are created, log out the following requests from HR into the console:
 
 // Mitzi's name
+console.log(internOne["first name"]);
 
 // Kennan's ID
+console.log(internTwo.id);
 
 // Keven's email
+console.log(internThree.email);
 
 // Gannie's name
+console.log(internFour["first name"]);
 
 // Antonietta's Gender
+console.log(internFive.gender);
 
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
-// console.log(kennan.speak());
+console.log(internTwo.speak());
 
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
-//console.log(antonietta.multiplyNums(3,4));
+console.log(internFive.multiplyNums(3,4));
 
 // === Great work! === Head over to the the arrays.js file or take a look at the stretch challenge
 
@@ -49,13 +96,38 @@ const example = {
 // 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
-const parent = {}
+const parent = {
+  name: Susan,
+  age: 70
+  speak: function (){
+    return this.name + "Hi, Im the Matriarch."
+  }
+
+  child = {
+    name: George,
+    age:50
+    speak: function (){
+      return this.name + "Hi, Im Susan's child."
+    }
+
+    grandChild = {
+      name: Sam,
+      age: 30
+      speak: function () {
+        return this.name + "Hi, I'm George's child."
+      }
+    },
+  },
+};
 
 // Log the parent object's name
+console.log(parent.name);
 
 // Log the child's age
+console.log(parent.child.age);
 
 // Log the name and age of the grandchild
+console.log(parent.child.grandchild.age);
 
 // Have the parent speak
 
